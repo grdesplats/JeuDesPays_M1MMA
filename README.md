@@ -1,4 +1,4 @@
-# JeuDesPays_M1_MMA_project
+# JeuDesPays_M1MMA
 
 ## Packages utilisés pour le projet (et leur version): 
 
