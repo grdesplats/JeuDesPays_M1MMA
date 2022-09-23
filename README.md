@@ -8,7 +8,7 @@
 
 Version Python 3.9
 
-Pour lancer le jeu, executer le fichier "main.py".  
+Pour lancer le jeu, executez le fichier "main.py".  
 
 Le but du jeu est de deviner le nom d’un pays à partir du contour de ses frontières, et de quelques indices supplémentaires :)
 
