@@ -145,7 +145,8 @@ while not done:
 
                     # si le mot écrit n'est pas le bon
                     else:
-                        # On affiche différentes informations pour le joueur en fonction du nombre d'erreurs (cf message_to_player() dans game_function.py)
+                        # On affiche différentes informations pour le joueur en fonction du nombre d'erreurs (cf
+                        # message_to_player() dans le fichier game_function.py)
                         wrong_answer_nb, wa_test, nb_error_text, won_game, is_playing = message_to_player(wrong_answer_nb, country_name)
                         if wrong_answer_nb == 4:
                             # on colorie tout l'écran en bleu
@@ -154,7 +155,7 @@ while not done:
                             plot_country(country_name, window_surface, brown_color, x_bounds, y_bounds, world=False,
                                          theta=0)
 
-                        print_time = current_time + 4000  # On affiche le texte pendant 3000 millisecondes
+                        print_time = current_time + 4000  # On affiche le texte pendant 4000 millisecondes
                         dist_capital = haversine_d(user_text, country_name, capital=True)
                         km_text = "Les capitales des pays se trouvent à " + str(
                             round(dist_capital, 2)) + " km de distance"
@@ -167,26 +168,31 @@ while not done:
                         window_surface.blit(wa_test, (480, 780))
                         window_surface.blit(nb_error_text, (480, 755))
                         pygame.display.update()
-                        # on fait patienter le jeu pendant 3 secondes
+                        # on fait patienter le jeu pendant 4 secondes
                         while current_time < print_time:
                             current_time = pygame.time.get_ticks()
 
+                        # on recouvre le texte d'un rectangle bleu
                         pygame.draw.rect(window_surface, blue_color, input_rect_cach_text)
 
                     user_text = ''
 
                 # si le mot écrit n'est pas inscrit dans la liste des pays
                 else:
-                    print_time = current_time + 2000  # On affiche le texte pendant 1500 millisecondes
+                    # on stocke la variable print_time prenant en entrée le temps de jeu en millisecondes au quel on
+                    # rajoute 2 secondes, ce qui permet d'afficher le texte pendant 2 secondes
+                    print_time = current_time + 2000
                     text = "-_- Ce pays ne se trouve pas dans la base de données -_-"
                     myText = base_font.render(text, True, black_color)
                     window_surface.blit(myText, (430, 730))
                     pygame.display.update()
 
-                    # on fait patienter le jeu pendant 3 secondes
+                    # tant que le temps de jeu est inférieur à print_time
                     while current_time < print_time:
+                        # on met à jour le temps de jeu
                         current_time = pygame.time.get_ticks()
 
+                    # on recouvre le texte par un pavé bleu
                     pygame.draw.rect(window_surface, blue_color, input_rect_cach_text)
 
                 # on réinitialise le texte écrit par le joueur
@@ -197,7 +203,7 @@ while not done:
                 # on lance une partie
                 is_playing = True
 
-
+            # Si le joueur appuie sur n'importe quelle autres touches du clavier
             else:
                 # on récupere le texte écrit par le joueur
                 user_text += event.unicode

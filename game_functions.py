@@ -16,7 +16,7 @@ def init_map(x_bounds, y_bounds, window_surface, col):
 
     # Pour chaque pays/région
     for region in array_region:
-        # On affiche le pays (voir la fonction plot_country ci-dessous)
+        # On affiche le pays (cf la fonction plot_country())
         plot_country(region, window_surface, col, x_bounds, y_bounds, world=True, theta=0)
 
     # on affiche en rouge les pays que le joueur n'a pas trouvé
