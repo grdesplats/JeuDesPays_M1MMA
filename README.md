@@ -8,6 +8,8 @@
 
 Version Python 3.9
 
-Le but du jeu est de deviner le nom d’un pays à partir du contour de ses frontières, le tout en utilisant le moins de packages possibles.
+Le but du jeu est de deviner le nom d’un pays à partir du contour de ses frontières, et de quelques indices supplémentaires :)
+
+Jeu codé avec le moins de packages possibles.
 
 https://github.com/grdesplats/JeuDesPays_M1_MMA_project/

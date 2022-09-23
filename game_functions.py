@@ -52,7 +52,7 @@ def plot_country(region, window_surface, col, x_bounds, y_bounds, world, theta):
         db_country["long"] = (db_country["long"] + np.pi) / (2 * np.pi) * x_bounds
         db_country['lat'] = -(db_country['lat'] - (np.pi / 2)) / (np.pi) * y_bounds
 
-        # on effectue la rotation
+        # on effectue la rotation (cf rotate())
         db_country["long"], db_country['lat'] = rotate(db_country["long"], db_country['lat'], theta=theta)
 
         # Maintenant, on veut "zoomer" et centrer le pays chosi. Pour ce faire, on stocke les distances max du pays ...
@@ -152,7 +152,7 @@ def haversine_d(wrong_answer, true_answer, capital=False):
                 (long_wrong - long_true) / 2) ** 2))
 
 
-# Fonction qui renvoie le message à afficher selon le nombre d'erreur que le joueur à commis
+# Fonction qui renvoie le message à afficher selon le nombre d'erreurs que le joueur à commis
 def message_to_player(wrong_answer_nb, country_name):
     # on ajoute 1 erreur au décompte
     wrong_answer_nb += 1
