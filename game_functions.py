@@ -166,9 +166,9 @@ def message_to_player(wrong_answer_nb, country_name):
     if wrong_answer_nb == 2:
         wa_test = "Indice : La dernière lettre du pays est " + country_name[-1]
         nb_error_text = "Seconde erreur"
-    # on donne comme indice la deuxième lettre
+    # pas d'indice pour la troisième erreur
     if wrong_answer_nb == 3:
-        wa_test = "Indice : La deuxième lettre du pays est " + country_name[1]
+        wa_test = " "
         nb_error_text = "Troisième erreur"
     # Pour le dernier indice, on affiche le pays dans le bon sens
     if wrong_answer_nb == 4:
@@ -180,6 +180,8 @@ def message_to_player(wrong_answer_nb, country_name):
         wa_test = ""
         nb_error_text = "Perdu :'( La bonne réponse était : " + country_name
         won_game = False
+
+        # on rajoute le pays à la liste des pays à colorier en rouge
         country_name_list_loose.append(country_name)
         # Retour à la page d'acceuil
         is_playing = False
