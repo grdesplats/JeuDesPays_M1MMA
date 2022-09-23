@@ -13,3 +13,5 @@ Le but du jeu est de deviner le nom d’un pays à partir du contour de ses fron
 Jeu codé avec le moins de packages possibles.
 
 https://github.com/grdesplats/JeuDesPays_M1_MMA_project/
+
+![JeuDesPays](https://user-images.githubusercontent.com/80618925/191925130-c0f5078e-a634-4fce-8d49-79ac7927832d.png)
